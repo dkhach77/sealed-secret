@@ -26,6 +26,6 @@ spec:
           image: {{ .Values.container.image }}
           envFrom:
            - configMapRef:
-              name: {{ .Release.Name }}-key
+              name: {{ .Release.Name }}-web
            - secretRef:
-              name: {{ .Release.Name }}-key
+              name: {{ .Release.Name }}-web
