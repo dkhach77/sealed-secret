@@ -4,7 +4,9 @@ container:
   image: nginx
 
 replicaCount: 3
-securityContext: S2hkYXYxLTc= # <- base64 encoded Khdav1-7
+securityContext:
+    runAsNonRoot: true
+    runAsUser: 10001
 secrets:
   all:
     password: S2hkYXYxLTc= # <- base64 encoded Khdav1-7
