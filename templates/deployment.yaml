@@ -19,13 +19,13 @@ spec:
           image: {{ .Values.container.image }}
           ports:
             - containerPort: 80
-containers:
-  - name: {{ .Chart.Name }}
-    securityContext:
-      {{- toYaml .Values.securityContext | nindent 12 }}
-    image: {{ .Values.container.image }}
-    envFrom:
-      - configMapRef:
-          name: {{ .Release.Name }}-key
-      - secretRef:
-          name: {{ .Release.Name }}-key
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+           {{- toYaml .Values.securityContext | nindent 12 }}
+          image: {{ .Values.container.image }}
+          envFrom:
+           - configMapRef:
+              name: {{ .Release.Name }}-key
+           - secretRef:
+              name: {{ .Release.Name }}-key
