@@ -24,8 +24,3 @@ spec:
           securityContext:
            {{- toYaml .Values.securityContext | nindent 12 }}
           image: {{ .Values.container.image }}
-          envFrom:
-           - configMapRef:
-              name: {{ .Release.Name }}-web
-           - secretRef:
-              name: {{ .Release.Name }}-web
