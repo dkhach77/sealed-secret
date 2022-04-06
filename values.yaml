@@ -1,0 +1,10 @@
+# Default Values for my Helm Chart
+
+container:
+  image: nginx
+
+replicaCount: 3
+secrets:
+  all:
+    password: S2hkYXYxLTc= # <- base64 encoded Khdav1-7
+    username: ZGtoYWNo # <- base64 encoded dkhach
