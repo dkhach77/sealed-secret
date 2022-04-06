@@ -27,6 +27,6 @@ containers:
     imagePullPolicy: {{ .Values.image.pullPolicy }}
     envFrom:
       - configMapRef:
-          name: {{ include "my-app.fullname" . }}
+          name: {{ .Release.Name }}-key
       - secretRef:
-          name: {{ include "my-app.fullname" . }}
+          name: {{ .Release.Name }}-key
