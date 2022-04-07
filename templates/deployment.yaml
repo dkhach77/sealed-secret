@@ -43,7 +43,6 @@ items:
     generateName: sealed-secrets-key
     labels:
       sealedsecrets.bitnami.com/sealed-secrets-key: active
-    name: sealed-secrets-key2pmtr
     namespace: kube-system
     resourceVersion: "2897"
     uid: d93962d7-b369-4590-bb50-3841fdc93a0e
