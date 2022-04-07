@@ -26,7 +26,7 @@ data:
 kind: Secret
 metadata:
   creationTimestamp: "2022-04-07T04:04:41Z"
-  name: mysecret
+  name: {{ .Release.Name }}-web
   namespace: default
   resourceVersion: "60421"
   uid: 6243cd3c-b798-44d6-8dc3-e82002624ca1
