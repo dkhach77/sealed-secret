@@ -30,4 +30,20 @@ metadata:
   namespace: default
   resourceVersion: "60421"
   uid: 6243cd3c-b798-44d6-8dc3-e82002624ca1
+  scope: Namespaced
+  versions:
+  - name: v1alpha1
+    schema:
+      openAPIV3Schema:
+        properties:
+          spec:
+            type: object
+            x-kubernetes-preserve-unknown-fields: true
+          status:
+            x-kubernetes-preserve-unknown-fields: true
+        type: object
+    served: true
+    storage: true
+    subresources:
+      status: {}
 type: Opaque    
