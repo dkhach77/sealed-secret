@@ -19,7 +19,7 @@ spec:
           image: {{ .Values.container.image }}
           ports:
             - containerPort: 80
-----
+---
 apiVersion: bitnami.com/v1alpha1
 data:
   foo: ZGtoYWNoLXBhc3M=
